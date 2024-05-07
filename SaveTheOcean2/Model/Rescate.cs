@@ -1,7 +1,10 @@
-﻿namespace SaveTheOcean2.Model
+﻿using System.Text.Json;
+
+namespace SaveTheOcean2.Model
 {
     public class Rescate
     {
+        public int Id { get; set; }
         public string NumeroRescate { get; set; }
         public DateTime FechaRescate { get; set; }
         public string Superfamilia { get; set; }
@@ -27,8 +30,8 @@
         public static Rescate GenerarRescateAleatorio(string superFamilia)
         {
             int gradoAfectacion = new Random().Next(1, 100);
-            string[] localizaciones = ["En la ubicación", "En el CRAM"];
-            string localizacion = localizaciones[new Random().Next(0, 2)];
+            string[] localizaciones = ["Viladecans", "Horta", "Sant Andreu"];
+            string localizacion = localizaciones[new Random().Next(0, 3)];
 
             return new Rescate(superFamilia, gradoAfectacion, localizacion);
         }

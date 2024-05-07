@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             exitButton = new Button();
             label1 = new Label();
             userRolComboBox = new ComboBox();
@@ -35,6 +36,8 @@
             label2 = new Label();
             label3 = new Label();
             userDataSaveButton = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // exitButton
@@ -106,6 +109,11 @@
             userDataSaveButton.UseVisualStyleBackColor = true;
             userDataSaveButton.Click += userDataSaveButton_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorProvider1.ContainerControl = this;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,6 +128,7 @@
             Controls.Add(exitButton);
             Name = "Form2";
             Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -133,5 +142,6 @@
         private Label label2;
         private Label label3;
         private Button userDataSaveButton;
+        private ErrorProvider errorProvider1;
     }
 }

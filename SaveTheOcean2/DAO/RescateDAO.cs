@@ -18,7 +18,7 @@ namespace SaveTheOcean2.DAO
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO rescates VALUES(@numRescate, @fechaRescate, @superFamilia, @GA, @localizacion)";
+                string query = "INSERT INTO rescates (numerorescate, fecharescate, superfamilia, gradoafectacion, localizacion) VALUES(@numRescate, @fechaRescate, @superFamilia, @GA, @localizacion)";
                 using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("numRescate", rescate.NumeroRescate);
@@ -27,14 +27,7 @@ namespace SaveTheOcean2.DAO
                     command.Parameters.AddWithValue("GA", rescate.GradoAfectacion);
                     command.Parameters.AddWithValue("localizacion", rescate.Localizacion);
 
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
+                    command.ExecuteNonQuery();
                 }
             }
         }
@@ -105,22 +98,16 @@ namespace SaveTheOcean2.DAO
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "UPDATE rescates SET fechaRescate = @fechaRescate, superFamilia = @superFamilia, GA = @GA, localizacion = @localizacion WHERE numRescate = @numRescate";
+                string query = "UPDATE rescates SET fechaRescate = @fechaRescate, superFamilia = @superFamilia, GA = @GA, localizacion = @localizacion WHERE numRescate = @numRescate AND id = @id";
                 using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("fechaRescate", rescate.FechaRescate);
                     command.Parameters.AddWithValue("superFamilia", rescate.Superfamilia);
                     command.Parameters.AddWithValue("GA", rescate.GradoAfectacion);
                     command.Parameters.AddWithValue("localizacion", rescate.Localizacion);
+                    command.Parameters.AddWithValue("id", rescate.Id);
 
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.ToString());
-                    }
+                    command.ExecuteNonQuery();
                 }
             }
         }

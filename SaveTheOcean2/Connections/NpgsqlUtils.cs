@@ -8,8 +8,11 @@ namespace SaveTheOcean2.Connections
     {
         public static string OpenConnection()
         {
+            // He cambiado el modo de conseguir la connexión para poder usar rutas relativas
+            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             IConfiguration config = new ConfigurationBuilder()
-                .AddJsonFile(@"E:\DAMv1\SaveTheOcean2\SaveTheOcean2\Connections\appsettings.json")
+                .SetBasePath(Path.Combine(baseDir, "../../../"))
+                .AddJsonFile("Connections/appsettings.json")
                 .Build();
 
             return config.GetConnectionString("MyPostgresConn");

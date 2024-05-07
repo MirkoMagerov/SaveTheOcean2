@@ -29,3 +29,4 @@ E:\DAMv1\SaveTheOcean2\SaveTheOcean2\obj\Debug\net8.0-windows\SaveTheOcean2.pdb
 E:\DAMv1\SaveTheOcean2\SaveTheOcean2\obj\Debug\net8.0-windows\SaveTheOcean2.genruntimeconfig.cache
 E:\DAMv1\SaveTheOcean2\SaveTheOcean2\obj\Debug\net8.0-windows\ref\SaveTheOcean2.dll
 E:\DAMv1\SaveTheOcean2\SaveTheOcean2\obj\Debug\net8.0-windows\SaveTheOcean2.Form3.resources
+E:\DAMv1\SaveTheOcean2\SaveTheOcean2\obj\Debug\net8.0-windows\SaveTheOcean2.sourcelink.json

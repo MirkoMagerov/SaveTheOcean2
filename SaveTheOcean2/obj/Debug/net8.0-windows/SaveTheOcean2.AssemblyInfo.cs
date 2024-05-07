@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaveTheOcean2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfef861b741dadc7706fa617b9977ff6bf38338f")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaveTheOcean2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaveTheOcean2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

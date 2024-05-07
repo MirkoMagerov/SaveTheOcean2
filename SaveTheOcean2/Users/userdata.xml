@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<usuarios>
+  <usuario>
+    <nombre>asd</nombre>
+    <rol>Veterinario</rol>
+    <experiencia>50</experiencia>
+  </usuario>
+  <usuario>
+    <nombre>asdasd</nombre>
+    <rol>Veterinario</rol>
+    <experiencia>-20</experiencia>
+  </usuario>
+  <usuario>
+    <nombre>asd</nombre>
+    <rol>Veterinario</rol>
+    <experiencia>50</experiencia>
+  </usuario>
+  <usuario>
+    <nombre>asdasd</nombre>
+    <rol>Veterinario</rol>
+    <experiencia>50</experiencia>
+  </usuario>
+</usuarios>
